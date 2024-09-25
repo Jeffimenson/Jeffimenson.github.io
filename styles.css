@@ -1,0 +1,32 @@
+body {
+    background-color: wheat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0 200px;
+}
+
+.about {
+    background-color: salmon;
+}
+
+.skills {
+    background-color: slateblue;
+}
+
+.project {
+    background-color: greenyellow;
+}
+
+.contact {
+    background-color: aquamarine;
+}
