@@ -23,8 +23,21 @@ body {
     background-color: slateblue;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .project {
     background-color: greenyellow;
+    width: 30%;
+    margin: 10px;
+    padding: 20px 10px;
+    border-radius: 25%;
+}
+
+.projects img {
+    width: 100%;
 }
 
 .contact {
