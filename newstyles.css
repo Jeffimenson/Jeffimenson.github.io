@@ -13,11 +13,11 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-button, .social-button {
+button, .social-button, .link-button {
   border: 0;
 }
 
-button:hover, .social-button {
+button:hover, .social-button:hover, .link-button:hover {
   cursor: pointer;
 }
 
@@ -81,29 +81,14 @@ span.weirdo {
   5px 5px hsla(342, 100%, 73%, 0.92), 
   6px 6px hsla(342, 100%, 73%, 0.90), 
   7px 7px hsla(342, 100%, 73%, 0.88), 
-  8px 8px hsla(342, 100%, 73%, 0.86), 
-  9px 9px hsla(342, 100%, 73%, 0.84), 
-  10px 10px hsla(342, 100%, 73%, 0.82), 
-  11px 11px hsla(342, 100%, 73%, 0.80), 
-  12px 12px hsla(342, 100%, 73%, 0.78), 
-  13px 13px hsla(342, 100%, 73%, 0.76), 
-  14px 14px hsla(342, 100%, 73%, 0.52), 
-  15px 15px hsla(342, 100%, 73%, 0.46), 
-  16px 16px hsla(342, 100%, 73%, 0.40), 
-  17px 17px hsla(342, 100%, 73%, 0.38), 
-  18px 18px hsla(342, 100%, 73%, 0.36), 
-  19px 19px hsla(342, 100%, 73%, 0.34), 
-  20px 20px hsla(342, 100%, 73%, 0.32), 
-  21px 21px hsla(342, 100%, 73%, 0.30), 
-  22px 22px hsla(342, 100%, 73%, 0.27), 
-  23px 23px hsla(342, 100%, 73%, 0.26), 
-  24px 24px hsla(342, 100%, 73%, 0.24), 
-  25px 25px hsla(342, 100%, 73%, 0.22), 
-  26px 26px hsla(342, 100%, 73%, 0.20), 
-  27px 27px hsla(342, 100%, 73%, 0.18), 
-  28px 28px hsla(342, 100%, 73%, 0.16), 
-  29px 29px hsla(342, 100%, 73%, 0.14), 
-  30px 30px hsla(342, 100%, 73%, 0.1);
+  8px 8px hsla(342, 100%, 73%, 0.66), 
+  9px 9px hsla(342, 100%, 73%, 0.64), 
+  10px 10px hsla(342, 100%, 73%, 0.62), 
+  11px 11px hsla(342, 100%, 73%, 0.60), 
+  12px 12px hsla(342, 100%, 73%, 0.58), 
+  13px 13px hsla(342, 100%, 73%, 0.56), 
+  14px 14px hsla(342, 100%, 73%, 0.52);
+
 }
 
 section.first img {
@@ -140,26 +125,39 @@ section.second .blurb {
   grid-area: "fhlv";
 }
 
-/* This button directly under blurb is for resume link */
-section.second .blurb button {
-  margin-top: 20px;
-  width: 25%;
-  height: 16%;
-}
 
 .link-button {
   font-size: 1rem;
 }
 
 .link-button::after {
-  content: " 🡥";
+  content: "\00a0🡥"; /* \00a0 is a guaranteed space (cause regular space sometimes no show) */
 }
 
-.link-button:hover {
+.link-button:hover, section.second .blurb a.link-button:hover {
   color: var(--highlight);
   border: 2px solid var(--highlight);
   background-color: var(--dark-fc);
 }
+
+/* This button directly under blurb is for resume link */
+section.second .blurb a.link-button {
+  margin-top: 20px;
+  width: 25%;
+  height: 16%;
+  display: block;
+
+  background-color: var(--first-bg);
+  color: var(--dark-fc);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+}
+
 
 .blurb h2 {
   font-size: 5rem;
