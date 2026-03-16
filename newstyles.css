@@ -160,7 +160,7 @@ section.second .blurb a.link-button {
 
 
 .blurb h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 3%;
 }
 
@@ -229,11 +229,27 @@ section.second .tabbox button:hover, section.second .tabbox .social-button:hover
 }
 
 
-
-
 section.third {
-  height: 67vh;
+  width: 100%;
+  height: 80vh;
 
+  display: grid;
+  grid-template-areas: "one" "two";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 7fr;
+}
+
+section.third .header-container {
+  color: var(--light-fc);
+  padding: 4% 5px 2% 5px;
+}
+
+section.third .header-container h2 {
+  font-size: 2rem;
+}
+
+section.third .card-array {
+  height: 100%;
   display: grid;
   grid-template-areas: "one two three four";
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -242,10 +258,11 @@ section.third {
   background-color: rgb(48, 48, 48);
   gap: 1px;
   padding: 1px;
+
+  min-height: 0;
 }
 
-section.third .card {
-  height: 100%;
+section.third .card-array .card {
   background-color: #000000;
   text-decoration: none;
 
@@ -253,6 +270,8 @@ section.third .card {
   grid-template-areas: "image" "text" "input";
   grid-template-rows: 6.5fr 2.5fr 1fr;
   color: var(--light-fc);
+
+  min-height: 0; /* this helps prevent card from sizing to be bigger than parent*/
 }
 
 section.third .card img {
@@ -284,8 +303,6 @@ section.third .card button {
   position: relative;
   left: 50%;
 }
-
-
 
 section.third .card:hover {
   cursor: pointer;
